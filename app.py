@@ -14,9 +14,9 @@ def calculate(value): #create a method name "calculate"
     try:
         num = int(value)
         if num <= 0:
-            return "Input must be a positive integer", 404
+            return "Input must be a positive integer", 404 #return an error if the number isnt positive. cant be less than 0
     except ValueError:
-        return "Input must be a valid integer", 400
+        return "Input must be a valid integer", 400 #return an error if the input isnt a valid (must be a number)
     return {
         "dec": num - 1,
         "hex": hex(num)
