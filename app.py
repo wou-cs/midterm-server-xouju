@@ -9,7 +9,7 @@ app = Flask(__name__)
 #the route for the the app http://localhost:8080/api/calcs/8 (example)
 #so that would mean to make it /api/calcs/value(?)
 
-@app.route("/api/calcs/<value>", methods=["GET"])
+@app.route("/api/calcs/<value>", methods=["GET"]) #the value of the number you want for the http goes into there
 def calculate(value): #create a method name "calculate"
     try:
         num = int(value)
